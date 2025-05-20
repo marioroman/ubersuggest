@@ -37,56 +37,29 @@ This approach ensures:
 pip install pipenv
 ```
 
-2. Install dependencies:
+2. Activate the virtual environment:
+```bash
+pipenv shell
+```
+
+3. Install dependencies:
 ```bash
 pipenv install
 ```
 
-3. Activate the virtual environment:
-```bash
-pipenv shell
-```
 
 4. Set up environment variables:
 Create a `.env` file in the root directory with the following variables:
 ```
 OPENAI_API_KEY=your_openai_api_key_here
 TAVILY_API_KEY=your_tavily_api_key_here
-LOGO_API_KEY=your_logo_api_key_here
+LOGO_API_KEY=your_logo_api_key_here (There's one already provided on .env.example)
 ```
 
 You'll need to:
 - Get an OpenAI API key from https://platform.openai.com/
 - Get a Tavily API key from https://tavily.com/
 - Get a Logo.dev API key from https://logo.dev
-
-## Building the Application
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd company-research-tool
-```
-
-2. Install development dependencies:
-```bash
-pipenv install --dev
-```
-
-3. Run tests:
-```bash
-pipenv run pytest
-```
-
-4. Build the package:
-```bash
-pipenv run python setup.py build
-```
-
-5. Install the package locally:
-```bash
-pipenv install -e .
-```
 
 ## Usage
 
@@ -97,60 +70,24 @@ You can run the script in two ways:
 pipenv run python src/main.py --company stripe.com
 ```
 
-2. Interactive mode (if no argument is provided):
-```bash
-pipenv run python src/main.py
-```
-
 The script will:
 1. Fetch the company's logo using Logo.dev
-2. Get 3 recent news articles about the company using Tavily
+2. Get 3 to 5 recent news articles about the company using Tavily
 3. Display the results in a formatted output
-
-## Future Improvements
-
-### Phase 2 Enhancements
-
-1. **Enhanced AI Capabilities**
-   - Implement sentiment analysis for news articles
-   - Add competitor analysis using AI
-   - Integrate financial data analysis
-   - Add trend prediction capabilities
-
-2. **User Experience**
-   - Add a web interface
-   - Implement batch processing for multiple companies
-   - Add export functionality (PDF, CSV, JSON)
-   - Create customizable report templates
-
-3. **Data Integration**
-   - Add more data sources (e.g., Crunchbase, LinkedIn)
-   - Implement real-time data updates
-   - Add historical data analysis
-   - Create data visualization dashboards
-
-4. **Performance & Scalability**
-   - Implement caching for frequently accessed data
-   - Add rate limiting and error handling
-   - Optimize API calls and reduce latency
-   - Add support for concurrent processing
-
-5. **Security & Compliance**
-   - Implement user authentication
-   - Add data encryption
-   - Ensure GDPR compliance
-   - Add audit logging 
-
 
 # Examples
 
 ## 1. Ubersuggest
 
+### bash
 ```bash
 python src/main.py --company ubersugggest
 ```
 
-Company: ubersugggest
+### Langsmith Tace
+https://smith.langchain.com/public/edd9d4f8-0414-48b7-a9b4-fce6d18cabb4/r/
+
+### Output
 # Company Logo 
 ![ubersuggest.com logo](https://img.logo.dev/ubersuggest.com?token=pk_M-QGkO2LSr6vQL9S4_Ez-g)
 
@@ -170,25 +107,28 @@ Ubersuggest is a global SEO and content platform that provides insights into org
 
 
 ## 2. Notion.so
+
+### bash
 ```bash
 python src/main.py --company notion
 ```
 
+### Langsmith Trace
+https://smith.langchain.com/public/9de92940-c8f4-4f86-bb8a-c04842f6f416/r
+
+### Output
+
 Company: notion
 # Company Logo 
-![notion.so logo](https://img.logo.dev/notion.so?token=pk_M-QGkO2LSr6vQL9S4_Ez-g)
+![Notion Logo](https://img.logo.dev/notion.so?token=pk_M-QGkO2LSr6vQL9S4_Ez-g)
 
 # Company Info
-- Domain: [notion.so](https://www.notion.so)
-- Recent News: 
-    - [Notion in the News](https://uno.notion.vip/insights/notion-in-the-news/)
-    - [What's New – Notion](https://www.notion.com/releases)
-    - [9 New Notion Updates (in under 14 minutes) - April 2025 - YouTube](https://www.youtube.com/watch?v=DxUzkC58ZQQ)
+- Domain: notion.so
 
 # Company Summary
-Notion is a collaboration software company that has recently reached a $10 billion valuation. They have been expanding globally and have made significant updates to their platform, including removing limits on their free plan and raising $50 million in funding.
+Notion is a popular productivity and collaboration tool that offers a variety of features to help individuals and teams organize their work efficiently.
 
-# Relevant Articles
-1. [Notion in the News](https://uno.notion.vip/insights/notion-in-the-news/)
-2. [What's New – Notion](https://www.notion.com/releases)
-3. [9 New Notion Updates (in under 14 minutes) - April 2025 - YouTube](https://www.youtube.com/watch?v=DxUzkC58ZQQ)
+# Recent News Articles
+1. [What's New – Notion](https://www.notion.com/releases)
+2. [EVERYTHING Notion Launched in 2024 (MASSIVE UPDATES!)](https://www.youtube.com/watch?v=Fxi6OAApodY)
+3. [8 NEW Notion Updates You Don't Want to Miss! (February 2025)](https://www.youtube.com/watch?v=KYRMObh2-R4&pp=0gcJCdgAo7VqN5tD)
