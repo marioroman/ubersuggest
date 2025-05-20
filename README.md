@@ -47,7 +47,6 @@ pipenv shell
 pipenv install
 ```
 
-
 4. Set up environment variables:
 Create a `.env` file in the root directory with the following variables:
 ```
@@ -60,6 +59,10 @@ You'll need to:
 - Get an OpenAI API key from https://platform.openai.com/
 - Get a Tavily API key from https://tavily.com/
 - Get a Logo.dev API key from https://logo.dev
+
+5. To Understand Tracing Call (Optional)
+- Set up a new Project in https://smith.langchain.com/
+- Get a LangSmith API Key 
 
 ## Usage
 
