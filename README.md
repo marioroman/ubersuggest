@@ -6,8 +6,8 @@ A CLI tool that uses LangChain, OpenAI, and Tavily to research companies and fet
 1. No unit tests are provided
 2. Only one agent was proposed for this approach to keep it simple. A more sofisticated approach could be developed using Langgraph with Multiple agents with releflection.
 3. This project was developed using a "vibe coding" approach with Cursor
-4. Time frame was reduced to 4 to 5 hours as indicated in the email.
-5. To run this project you MUST config your OPENAI_API_KEY and TAVILY_API_KEY
+4. Time frame was reduced to 4 to 5 hours as indicated in the email
+5. I assumed that an OpenAI key is provided, so to run this project you MUST config your OPENAI_API_KEY and TAVILY_API_KEY.
 
 ## Architecture
 
