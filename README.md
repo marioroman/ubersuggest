@@ -94,20 +94,21 @@ https://smith.langchain.com/public/edd9d4f8-0414-48b7-a9b4-fce6d18cabb4/r/
 # Company Logo 
 ![ubersuggest.com logo](https://img.logo.dev/ubersuggest.com?token=pk_M-QGkO2LSr6vQL9S4_Ez-g)
 
-# Company Info
+# Company Info 
 - Company Name: Ubersuggest
 - Website: [ubersuggest.com](https://ubersuggest.com)
-- CEO: Max Cheprasov
-- Parent Company: NP Digital
+- Industry: SEO and content
+- Chief Technology Officer: Mynul Hoda
 
 # Company Summary
-Ubersuggest is a global SEO and content platform that provides insights into organic and paid traffic. Recently, Max Cheprasov has joined as its CEO.
+Ubersuggest is a global SEO and content tool that helps users with keyword research, competition analysis, backlink data, and traffic trends. It offers user-friendly features for small businesses and provides great long-term value with one-time payment plans.
 
 # Recent News Articles
-1. [Ubersuggest (@ubersuggest) • Instagram photos and videos](https://www.instagram.com/ubersuggest/?hl=en) - Announcement of Guillaume Lansiaux as the new Director of Engineering.
-2. [Ubersuggest Announces New CEO Max Cheprasov - GlobeNewswire](https://www.globenewswire.com/news-release/2021/04/20/2213117/0/en/Ubersuggest-Announces-New-CEO-Max-Cheprasov.html) - Max Cheprasov joins as CEO.
-3. [New Ubersuggest Update: Get Better Traffic Insights on Your Competitors - Neil Patel](https://neilpatel.com/blog/traffic-insights-on-competitors/) - Provides insights into paid traffic.
-
+1. [Ubersuggest Announces Mynul Hoda as New Chief Technology Officer](https://www.globenewswire.com/search/organization/Ubersuggest)
+2. [Gisele El Khoury published an article on Ubersuggest in Language Learning](https://www.stlawu.edu/news/gisele-el-khoury-published-article-ubersuggest-language-learning)
+3. [Ubersuggest: A Comprehensive Guide for Maximum Results](https://neilpatel.com/blog/ubersuggest-guide/)
+4. [The Future of Ubersuggest](https://neilpatel.com/blog/ubersuggest-update/)
+5. [Ubersuggest Review 2025: Best Budget SEO Tool For ...](https://techfee.com/ubersuggest-review-2025/)
 
 ## 2. Notion.so
 

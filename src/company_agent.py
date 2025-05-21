@@ -97,10 +97,11 @@ class CompanyResearchAgent:
         """Get recent news articles about the company using Tavily"""
         try:
             search_result = self.tavily_client.search(
-                query=f"latest news about {company}",
+                query=f"Latest news and articles about {company}",
                 search_depth="advanced",
-                max_results=3,
+                max_results=5,
                 search_type="news",
+                exclude_domains=["youtube.com", "facebook.com", "twitter.com", "instagram.com"],
                 sort_by="relevance"
             )
             return search_result.get('results', [])
