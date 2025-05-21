@@ -2,6 +2,12 @@
 
 A CLI tool that uses LangChain, OpenAI, and Tavily to research companies and fetch their logos and recent news articles.
 
+# Assumptions, Know Issues and Improvements.
+1. No unit tests are provided
+2. Only one agent was proposed for this approach to keep it simple. A more sofisticated approach could be developed using Langgraph with Multiple agents with releflection.
+3. This project was developed using a "vibe coding" approach with Cursor
+4. Time frame was reduced to 4 to 5 hours as indicated in the email.
+
 ## Architecture
 
 ### AI Components
@@ -77,6 +83,26 @@ The script will:
 1. Fetch the company's logo using Logo.dev
 2. Get 3 to 5 recent news articles about the company using Tavily
 3. Display the results in a formatted output
+
+# Costs and Tokens Analysis
+
+| Metric | Value/Observation |
+| :-- | :-- |
+| **Time Window** | 1 day |
+| **Most Recent Run** | 5/21/2025, 10:12:19 AM |
+| **Run Count (1D)** | 41 |
+| **Total Cost (1D)** | \$0.06 |
+| **Total Cost (peak)** | Below \$0.02 at any single time |
+| **Cost per Trace (P50/P99)** | Well below \$0.01 per trace |
+| **Output Tokens (max batch)** | Peaks just above 3,000 tokens |
+| **Output Tokens per Trace** | Most traces < 500 tokens (P99), median much lower |
+| **Input Tokens (max batch)** | Peaks near 25,000 tokens |
+| **Input Tokens per Trace** | Most traces < 7,000 tokens (P99), median much lower |
+| **Efficiency** | Very low cost per run, moderate and controlled tokens |
+
+![Costs Overview](doc/costs-overview.png)
+![Total Costs](doc/costs.png)
+![Input/Output Tokens](doc/input-output-tokens.png)
 
 # Examples
 
