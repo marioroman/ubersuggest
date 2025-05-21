@@ -5,6 +5,9 @@ from langchain.agents import Tool, AgentExecutor, create_react_agent
 from langchain.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from tavily import TavilyClient
+from langsmith import Client
+from langchain.callbacks.tracers import LangChainTracer
+from langchain.callbacks.manager import CallbackManager
 
 class CompanyResearchAgent:
     def __init__(self):
@@ -15,6 +18,11 @@ class CompanyResearchAgent:
             os.getenv("LOGO_DEV_API_KEY")
         ]):
             raise ValueError("Missing required API keys. Please check your .env file.")
+            
+        # Initialize LangSmith client if API key is available
+        self.langsmith_client = None
+        if os.getenv("LANGSMITH_API_KEY"):
+            self.langsmith_client = Client()
             
         # Initialize Tavily client
         self.tavily_client = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
@@ -34,11 +42,17 @@ class CompanyResearchAgent:
             )
         ]
         
-        # Initialize LLM
+        # Initialize LLM with LangSmith tracing if available
+        callback_manager = None
+        if os.getenv("LANGCHAIN_API_KEY"):
+            tracer = LangChainTracer()
+            callback_manager = CallbackManager([tracer])
+            
         self.llm = ChatOpenAI(
             temperature=0,
             model="gpt-3.5-turbo",
-            api_key=os.getenv("OPENAI_API_KEY")
+            api_key=os.getenv("OPENAI_API_KEY"),
+            callback_manager=callback_manager
         )
         
         # Initialize agent
@@ -79,7 +93,6 @@ class CompanyResearchAgent:
         except Exception as e:
             return f"Error fetching logo: {str(e)}"
 
-    
     def get_company_news(self, company: str) -> List[Dict]:
         """Get recent news articles about the company using Tavily"""
         try:
